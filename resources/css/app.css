@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+@source '../js/**/*.vue';
+@source '../js/**/*.js';
+@source '../js/**/*.ts';
+
+@theme {
+    --font-sans: 'IBM Plex Sans Arabic', 'Cairo', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Cairo', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d97706;
+}
+
+/* Editorial Typography & Reading Rhythm */
+.prose-editorial {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    line-height: 2.15;
+    font-size: 1.15rem;
+    color: #e5e5e5;
+}
+
+.prose-editorial p {
+    margin-bottom: 1.85rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.prose-editorial h2 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #f59e0b;
+    margin-top: 2.75rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-right: 1rem;
+    border-right: 4px solid #d97706;
+}
+
+.prose-editorial h3 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fef3c7;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.prose-editorial blockquote {
+    margin: 2.5rem 0;
+    padding: 1.5rem 2rem;
+    border-right: 4px solid #f59e0b;
+    background: rgba(245, 158, 11, 0.05);
+    border-radius: 0.5rem 0 0 0.5rem;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #fde68a;
+}
+
+/* 3D Book Cover Effect */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+.book-shadow {
+    box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.7),
+                -2px 0 10px rgba(245, 158, 11, 0.2);
+}
